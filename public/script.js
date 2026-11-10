@@ -6,7 +6,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     const password = document.getElementById('password').value;
 
     try {
-        const response = await fetch('/login', {
+        const response = fetch('https://wizard-p1iw.onrender.com/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

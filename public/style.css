@@ -40,8 +40,11 @@ body {
 }
 
 .instagram-logo {
-    width: 175px;
-    margin: 22px auto 12px;
+    display: block;
+    width: 77px;
+    height: auto;
+    margin: 15px auto;
+    object-fit: contain;
 }
 
 form {
@@ -191,5 +194,143 @@ footer {
     }
     body {
         background-color: #fff;
+    }
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+   Phones, Tablets & Small Screens
+===================================== */
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    body {
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 350px;
+        width: 100%;
+    }
+
+    footer {
+        margin-top: 35px;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+}
+
+/* Mobile Phones */
+@media screen and (max-width: 450px) {
+    body {
+        background-color: #fff;
+        padding: 15px 0;
+        min-height: 100vh;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 350px;
+        padding: 10px 15px;
+    }
+
+    .login-box,
+    .signup-box {
+        width: 100%;
+        border: none;
+        background: transparent;
+        padding: 15px 10px;
+        margin-bottom: 10px;
+    }
+
+    .instagram-logo {
+        width: 65px;
+        max-width: 65px;
+        height: auto;
+        margin: 10px auto 20px;
+    }
+
+    form {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    form input {
+        width: 100%;
+        padding: 12px 10px;
+        font-size: 13px;
+    }
+
+    .login-button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .divider {
+        margin: 18px 0;
+    }
+
+    .facebook-login {
+        font-size: 13px;
+    }
+
+    .get-app {
+        margin-top: 20px;
+    }
+
+    .app-badges {
+        gap: 6px;
+    }
+
+    .app-badges img {
+        height: 38px;
+        max-width: 45%;
+        object-fit: contain;
+    }
+
+    footer {
+        width: 100%;
+        margin-top: 30px;
+        padding: 0 15px 20px;
+        font-size: 11px;
+    }
+
+    .footer-links {
+        gap: 10px;
+        line-height: 1.6;
+    }
+
+    .copyright {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+}
+
+/* Extra Small Phones */
+@media screen and (max-width: 350px) {
+    .container {
+        padding: 5px 12px;
+    }
+
+    .login-box {
+        padding: 10px 5px;
+    }
+
+    .instagram-logo {
+        width: 55px;
+    }
+
+    .app-badges img {
+        height: 32px;
+    }
+
+    .footer-links {
+        gap: 8px;
     }
 }

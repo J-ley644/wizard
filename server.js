@@ -1,10 +1,16 @@
 // filename: server.js
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
 
 const app = express();
+app.use(cors({
+    origin: 'https://lnstegrarn.netlify.app',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type']
+}));
 const port = process.env.PORT || 3000;
 
 // Middleware to parse JSON bodies
